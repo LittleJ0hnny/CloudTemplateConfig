@@ -13,6 +13,14 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      javax:
+        persistence:
+          validation: none
+      hibernate:
+        enable_lazy_load_no_trans: true
 
 
 
