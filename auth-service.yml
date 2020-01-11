@@ -2,10 +2,8 @@ server:
   port: 8200
 
 spring:
-  application:
-    name: authservice
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/cred_db?serverTimezone=UTC
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/cred_db?createDatabaseIfNotExist=true&serverTimezone=UTC
     username: root
     password: root
     hikari:

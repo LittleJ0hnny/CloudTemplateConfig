@@ -7,8 +7,6 @@ spring:
       password: discPassword
       name: discUser
       roles: SYSTEM
-  application:
-    name: discovery
  
 eureka:
   client:
