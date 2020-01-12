@@ -1,17 +1,18 @@
 server:
   port: 8761
-
 spring:
   security:
     user:
-      name: ${DISCOVERY_USERNAME:discUser}
-      password: ${DISCOVERY_PASSWORD:discPassword}
+      password: discPassword
+      name: discUser
       roles: SYSTEM
- 
+  application:
+    name: discovery
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${DISCOVERY_USERNAME:discUser}:${DISCOVERY_PASSWORD:discPassword}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/
+      defaultZone: http://discUser:discPassword@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/
     register-with-eureka: false
     fetch-registry: false
     
