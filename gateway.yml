@@ -11,6 +11,10 @@ zuul:
   FormBodyWrapperFilter:
     pre:
       disable: false
+  routes:
+    discovery:
+      path: /${DISCOVERY_APP_NAME:discovery-service}/**
+      url: http://${DISCOVERY_USERNAME:discUser}:${DISCOVERY_PASSWORD:discPassword}@${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/
             
 management:
   endpoints:
